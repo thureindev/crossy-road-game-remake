@@ -1,5 +1,10 @@
 """Setting variables tweaked here"""
 import random
+CLOCK_TICK = 50  # in milliseconds
+
+# Screen dimensions
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 
 # Car settings
 CAR_SPEED_MIN = 10

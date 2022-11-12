@@ -1,8 +1,29 @@
 """This project uses Tkinter library to recreate the popular game Crossy-Road"""
 
+import tkinter as tk
+import time
+import game_settings as gs
+
+import game as g
+
 
 def main():
-    pass
+    game = g.Game()
+    game.after(ms=gs.CLOCK_TICK, func=game.visual_update())
+    game.mainloop()
+
+    '''
+    def after(self, ms, func=None, *args):
+        """Call function once after given time.
+
+        MS specifies the time in milliseconds. FUNC gives the
+        function which shall be called. Additional parameters
+        are given as parameters to the function call.  Return
+        identifier to cancel scheduling with after_cancel."""
+    '''
+    # png = PhotoImage(file=r'example.png')  # Just an example
+    # canvas.create_image(0, 0, image=png, anchor="nw")
+
     # Create instances of Level Obj
     # Create one instance of Player Obj
     # Create one instance of Game Obj
