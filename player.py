@@ -5,7 +5,7 @@ import game_settings as gs
 
 
 class Player():
-    def __init__(self, speed=gs.CAR_SPEED_MIN, color=gs.get_random_car_color()
+    def __init__(self, speed=gs.get_random_car_speed(), color=gs.get_random_car_color()
                  , direction=gs.get_random_car_direction()):
         self.speed = speed
         self.color = color

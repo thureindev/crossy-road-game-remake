@@ -16,6 +16,10 @@ def get_random_car_color():
     return random.choice(colors)
 
 
+def get_random_car_speed():
+    return random.randint(CAR_SPEED_MIN, CAR_SPEED_MAX)
+
+
 def get_random_car_direction():
     direction = ['left', 'right']
     return random.choice(direction)
