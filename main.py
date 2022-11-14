@@ -9,6 +9,24 @@ import game as g
 
 def main():
     game = g.Game()
+
+    def key_pressed(event):
+        key = event.keysym
+        print(f"Pressed key: {key}")
+        if key == "Up":
+            game.player.move_up()
+        elif key == "Down":
+            game.player.move_down()
+        elif key == "Left":
+            game.player.move_left()
+        elif key == "Right":
+            game.player.move_right()
+        else:
+            pass
+            # do nth
+
+    game.bind("<Key>", key_pressed)
+
     game.after(ms=gs.CLOCK_TICK, func=game.visual_update())
     game.mainloop()
 

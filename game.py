@@ -34,20 +34,18 @@ class Game(tk.Tk):
         self.spawn_bases = []
         a_base = CarSpawnBase(pos_x=0, pos_y=50, direction='right')
         self.spawn_bases.append(a_base)
-        a_base.produce_random_car()
+        a_base.start_produce_random_car()
 
     def visual_update(self):
         self.canvas.delete("all")
 
-        print("I'm visual update")
         for base in self.spawn_bases:
-            print(base)
             for car in base.cars:
-                print(car)
                 car.move()
-                print(car.color)
                 self.canvas.create_rectangle(car.draw_x0, car.draw_y0, car.draw_x1, car.draw_y1, fill=car.color)
 
                 # self.canvas.create_rectangle(50, 50, 50 + 50, 50 + 20, fill='blue')
+        self.canvas.create_rectangle(self.player.draw_x0, self.player.draw_y0, self.player.draw_x1,
+                                     self.player.draw_y1, fill=car.color)
 
         self.after(ms=gs.CLOCK_TICK, func=self.visual_update)
