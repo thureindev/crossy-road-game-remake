@@ -1,7 +1,7 @@
 """CarSpawnBase Class to control spawn positions and randomness of cars spawned"""
 from car import Car
 import game_settings as gs
-
+import time
 
 class CarSpawnBase:
     def __init__(self, pos_x=0, pos_y=0, direction="left", interval=2):
